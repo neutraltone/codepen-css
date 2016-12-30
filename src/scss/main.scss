@@ -1,0 +1,17 @@
+/**
+ * main.scss
+ * =========
+ * Import our scss partials
+ */
+
+// Settings - variables
+@import 'settings';
+
+// Generic - low-specificity, far-reaching rulesets.
+@import 'generic';
+
+// Base - Unclassed HTML elements
+@import 'base';
+
+// Objects - Design-free objects, abstractions and patterns.
+@import 'objects';

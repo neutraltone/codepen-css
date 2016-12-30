@@ -1,0 +1,16 @@
+{
+  "src": {
+    "src": "src",
+    "scss": "src/scss/**/*.scss"
+  },
+  "dest": {
+    "dist": "dist",
+    "css": "dist/assets/css"
+  },
+  "dep": {
+    "normalize": "node_modules/normalize-scss/sass"
+  },
+  "support": {
+    "browser": ["last 2 versions"]
+  }
+}
