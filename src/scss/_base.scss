@@ -1,0 +1,23 @@
+/**
+ * base.scss
+ */
+
+// Headings
+h1, h2, h3, h4, h5, h6, p, pre, .example {
+  margin: 2rem auto;
+}
+
+// Rules
+hr {
+  height: 1px;
+  border: 0;
+  background-color: $color--dark;
+}
+
+// Code
+pre {
+  display: block;
+  padding: 1rem;
+  border: 1px solid $color--dark;
+  overflow-y: auto;
+}

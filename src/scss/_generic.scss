@@ -1,0 +1,9 @@
+/**
+ * _generic.scss
+ */
+
+// Import normalize scss from node_modules
+@import 'normalize';
+
+// Initialise normalize scss mixin
+@include normalize();
