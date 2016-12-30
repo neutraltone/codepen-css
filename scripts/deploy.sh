@@ -5,7 +5,7 @@ if [ $TRAVIS_BRANCH == 'master' ] ; then
     cd dist
     git init
 
-    git remote add deploy "deploy@codepen.neutraltone.com:/var/www/codepen/html"
+    git remote add deploy "deploy@neutraltone.com:/var/www/codepen/html"
     git config user.name "Travis CI"
     git config user.email "tonyphipps+travisCI@gmail.com"
 
