@@ -2,17 +2,17 @@ language: node_js
 cache:
   yarn: true
   directories:
-    - node_modules
+  - node_modules
 node_js:
-  - "7.3.0"
+- 7.3.0
 env:
   global:
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 addons:
   ssh_known_hosts: codepen.neutraltone.com
 before_install:
-  - bash scripts/install.sh
+- bash scripts/install.sh
 script:
-  - bash scripts/build.sh
+- bash scripts/build.sh
 after_success:
-  - bash scripts/deploy.sh
+- bash scripts/deploy.sh
