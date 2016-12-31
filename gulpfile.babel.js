@@ -34,8 +34,7 @@ import options from './gulp-options.json';
 const banner = [
   `/*!
     * ${pkg.name}
-    * ${pkg.title}
-    * ${pkg.url}
+    * ${pkg.repository.url}
     * @author ${pkg.author}
     * @version ${pkg.version}
     * Copyright ${new Date().getFullYear()}. ${pkg.license} licensed.
