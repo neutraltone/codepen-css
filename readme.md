@@ -1,5 +1,5 @@
 # codepen-css 
-[![Build Status](https://api.travis-ci.org/neutraltone/codepen-css.svg?branch=master)]
+![Build Status](https://api.travis-ci.org/neutraltone/codepen-css.svg?branch=master)
 
 A theme style sheet to be used in conjunction with my code pen account for
 displaying code snippets and example demos.
