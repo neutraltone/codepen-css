@@ -8,7 +8,9 @@ import gulp from 'gulp';
 import autoprefixer from 'gulp-autoprefixer';
 import browserSync from 'browser-sync';
 import header from 'gulp-header';
+import imagemin from 'gulp-imagemin';
 import plumber from 'gulp-plumber';
+import pngquant from 'imagemin-pngquant';
 import rename from 'gulp-rename';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
@@ -52,12 +54,14 @@ const banner = [
  */
 
 gulp.task('serve', [
-    'sass'
+    'sass',
+    'images'
   ], () => {
     browserSync.init({
       server: options.dest.dist
     });
     gulp.watch(options.src.scss, ['sass']);
+    gulp.watch(options.src.img, ['images']);
     gulp.watch(`${options.dest.dist}/*.html`).on('change', browserSync.reload);
 });
 
@@ -101,8 +105,30 @@ gulp.task('sass', () => {
 });
 
 
+/**
+ * Image Optimisation
+ * ------------------
+ * - Compress images
+ * - Copy to destination
+ * - Reload BrowserSync
+ */
+
+gulp.task('images', () => {
+  return gulp.src(options.src.img)
+    .pipe(imagemin({
+        progressive: true,
+        svgoPlugins: [{
+          removeViewBox: false
+        }],
+        use: [pngquant()]
+    }))
+    .pipe(gulp.dest(options.dest.img))
+    .pipe(browserSync.stream())
+});
+
+
 // Default Task
 gulp.task('default', ['serve']);
 
 // Build Task
-gulp.task('build', ['sass']);
+gulp.task('build', ['sass', 'images']);
