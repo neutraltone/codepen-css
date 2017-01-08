@@ -1,11 +1,13 @@
 {
   "src": {
     "src": "src",
-    "scss": "src/scss/**/*.scss"
+    "scss": "src/scss/**/*.scss",
+    "img": "src/img/{,*/}*.{jpg,jpeg,png,gif,svg}"
   },
   "dest": {
     "dist": "dist",
-    "css": "dist/assets/css"
+    "css": "dist/assets/css",
+    "img": "dist/assets/img"
   },
   "dep": {
     "normalize": "node_modules/normalize-scss/sass"
